@@ -104,7 +104,7 @@ const Home = () => {
   };
 
   return (
-    <FormProvider {...methods}>
+    <FormProvider {...methods} >
       <SignupForm onSubmit={handleSignupForm} />
     </FormProvider>
   );

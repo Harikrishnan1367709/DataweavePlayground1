@@ -44,18 +44,18 @@ const items = [
 
 export function Sidebar() { 
   return (
-    <SidebarProvider>
-      <UISidebar>
+    <SidebarProvider  >
+      <UISidebar >
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
-            <SidebarGroupContent>
+            <SidebarGroupLabel className="ml-10 mt-6 stone-800">Application</SidebarGroupLabel>
+            <SidebarGroupContent className="mt-20">
               <SidebarMenu>
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild>
+                    <SidebarMenuButton asChild className="mb-8 ml-6">
                       <a href={item.url} className="sidebar-link flex items-center">
-                        <item.icon className="icon mr-2" /> {/* Ensure `item.icon` is valid */}
+                        <item.icon className="icon mr-2" /> 
                         <span>{item.title}</span>
                       </a>
                     </SidebarMenuButton>

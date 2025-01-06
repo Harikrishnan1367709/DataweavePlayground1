@@ -20,7 +20,7 @@ const App = () => {
 
       {/* Main content */}
       <div className="flex-1 bg-gray-100 p-6 ml-80 rounded-lg shadow-md">
-        <BrowserRouter>
+        <BrowserRouter className="m-6">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login />} />
