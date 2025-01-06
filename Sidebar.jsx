@@ -1,6 +1,7 @@
 import React from "react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import {  Home,  LogIn,  LogOut, Settings, Users } from "lucide-react";
+
 
 import {
   Sidebar as UISidebar,
@@ -21,19 +22,19 @@ const items = [
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Login",
     url: "#",
-    icon: Inbox,
+    icon: LogIn,
   },
   {
-    title: "Calendar",
+    title: "Users",
     url: "#",
-    icon: Calendar,
+    icon: Users,
   },
   {
-    title: "Search",
+    title: "Logout",
     url: "#",
-    icon: Search,
+    icon: LogOut,
   },
   {
     title: "Settings",

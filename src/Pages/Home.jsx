@@ -1,14 +1,20 @@
 import React from "react";
 import { useForm, FormProvider, Controller } from "react-hook-form";
-import { Button } from "./components/ui/button";
-import { Input } from "./components/ui/input";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
 import {
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
-import supabase from "./supabase";
+import supabase from "../supabase";
+import { useNavigate } from "react-router";
+
+
+
+
+
 
 const FormField = ({ label, name, control, rules, render, error }) => {
   return (
@@ -68,8 +74,10 @@ const SignupForm = ({ onSubmit }) => {
   );
 };
 
-const Signupform = () => {
+
+const Home = () => {
   const methods = useForm();
+  const navigate=useNavigate();
 
   const handleSignupForm = async (data) => {
     const { email, password } = data;
@@ -86,6 +94,7 @@ const Signupform = () => {
       } else {
         console.log("Signup successful!", signUpData);
         alert("Signup successful! Please check your email to verify your account.");
+        navigate("/Login");
         // Redirect or perform further actions
       }
     } catch (error) {
@@ -101,4 +110,4 @@ const Signupform = () => {
   );
 };
 
-export default Signupform;
+export default Home;
